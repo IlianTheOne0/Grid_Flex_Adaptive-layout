@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: rgb(255, 255, 255);
+  background-color: rgb(20, 20, 20);
+}
+
+a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.header {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(40, 40, 40);
+  z-index: 1000;
+}
+.header .container .header__navbar__hamburger {
+  display: none;
+}
+.header .container .header__navbar {
+  display: flex;
+  justify-content: end;
+}
+.header .container .header__navbar a {
+  margin-left: 50px;
+  font-size: 18px;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.header .container .header__navbar a:hover {
+  color: rgb(175, 175, 175);
+  transform: translateY(-2.5px);
+}
+
+.about {
+  width: 100%;
+  margin-top: 50px;
+  padding: 20px;
+}
+.about .container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px 50px;
+}
+.about .container .about__profile-photo {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.gallery .container {
+  display: grid;
+  grid-column: 1/4;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+.gallery .container .gallery__image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.services {
+  width: 80%;
+  max-width: 1200px;
+  text-align: center;
+  margin: 50px auto 0;
+  padding: 60px 20px;
+  border-radius: 8px;
+  background-color: rgb(50, 50, 50);
+}
+.services h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+}
+.services .container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.services .container .service__item {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: none;
+  background-color: rgb(30, 30, 30);
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+.services .container .service__item h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+.services .container .service__item p {
+  font-size: 16px;
+}
+.services .container .service__item:hover {
+  background-color: rgb(40, 40, 40);
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 25px 0 0;
+  padding: 12.5px 0;
+  background-color: rgb(40, 40, 40);
+  z-index: 1000;
+}
+.footer .container .footer__contact-us::after {
+  content: "email@example.com";
+  cursor: pointer;
+}
+.footer .container .footer__social {
+  display: flex;
+  justify-content: end;
+}
+.footer .container .footer__social a {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.footer .container .footer__social a:hover {
+  color: rgb(175, 175, 175);
+  transform: translateY(-2.5px);
+  transition: 0.3s ease;
+}
+.footer .container .footer__social .footer__social__hr {
+  width: 3px;
+  height: 15px;
+  margin: 6.5px 25px;
+  border: none;
+  border-radius: 25px;
+  background-color: rgb(255, 255, 255);
+}
+
+@media (min-width: 1024px) {
+  .about {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 1023px) {
+  .navbar {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  .services .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  .footer {
+    flex-direction: column;
+  }
+  .services .container {
+    grid-template-columns: 1fr;
+  }
+}/*# sourceMappingURL=style.css.map */
